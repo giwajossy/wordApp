@@ -1,0 +1,45 @@
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+
+<script src="js/index.js"></script>
+
+
+<script>
+
+    // GSAP Script
+    gsap.from(".col-md-5", { duration: 1, ease: "circ" })
+    gsap.from("#word", { duration: 1, y: 50 })
+    gsap.from("#fetchButton", { duration: 1, y: -50 })
+    gsap.to("#result", {
+        duration: .2, border: "1px solid black", scale: 1, stagger: 0.09, rotationX: 360, onComplete: function () {
+            gsap.to("#result", { duration: 1, scale: 1.09 })
+        }
+    })
+
+    let tween = gsap.to(".desc", {
+        y: -300,
+        ease: "none",
+        paused: true
+    })
+
+    document.querySelector("#fetchButton").onclick = () => tween.play();
+    // End of GSAP Script
+
+
+    // Tooltip Script
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    // End of Tooltip Script
+
+</script>
+
+</body>
+
+</html>

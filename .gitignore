@@ -1,0 +1,7 @@
+# Holds the API_KEY
+/*.env
+
+# Dependency directories
+/node_modules/
+
+npm-debug.log

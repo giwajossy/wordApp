@@ -1,0 +1,169 @@
+body {
+  background: #ffffff;
+}
+
+
+
+
+.container {
+    max-width: 960px;
+  }
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-headerf {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+  }
+  .site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
+
+  /*
+   * Extra utilities
+  */
+  
+  .flex-equal > * {
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      flex: 1;
+    }
+  }
+
+
+  #result {
+    padding: .4%;
+    margin: 5px;
+    min-width: 15%;
+    border: none;
+    border-radius: 3em;
+  }
+
+  #result button {
+    text-align: left;
+  }
+
+  .ttip {
+    
+  }
+
+
+
+  @media (max-width: 400px) {
+    #result  {
+      min-width: 45%;
+    }
+  }
+
+
+#fetchButton {
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  padding: 4%;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background: rgba(0, 0, 0, .75);
+  color: #fff;
+  font-size: 1.2em;
+  transition: all .5 ease-in
+}
+
+#fetchButton:hover {
+  background: rgba(0, 0, 0, .8);
+  transition: all .5 ease-in
+}
+
+
+.form-control {
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 3%;
+  border: 1px solid black;
+  border-radius: 0;
+  border-bottom: 0;
+  transition: all .5s ease-in;
+}
+
+.form-control:focus {
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+input[type="text"] {
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  transition: all .5s ease-in;
+}
+
+input:focus {
+  border: 1px solid black;
+  box-shadow: none !important;
+  transition: all .5s ease-in;
+}
+
+
+#space {
+  border: 2px solid rgba(0, 0, 0, .005);
+  box-shadow: 1px 3px 30px rgba(0, 0, 0, .2);
+  transition: all .5s ease-in-out;
+}
+
+#space:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  transition: all .5s ease-in-out;
+}
+
+#queryPlacard {
+  margin-top: 1.5% !important;
+}
+
+#guidePC, #guideMobile {
+  color: rgba(0, 0, 0, .6);
+}
+
+
+@media screen and (max-width: 450px) {
+  #space {
+    border: 1px solid rgba(0, 0, 0, .005);
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .09);
+    padding: 5%;
+    margin-top: 10% !important;
+    transition: all .5s ease-in-out;
+  }
+
+  #space:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+    transition: all .5s ease-in-out;
+  }
+
+  #queryPlacard {
+    margin-top: 10% !important;
+  }
+
+  #guidePC {
+    display: none;
+  }
+
+}
+
+
+@media screen and (min-width: 450px) {
+  #guideMobile {
+    display: none;
+  }
+}
