@@ -1,11 +1,10 @@
 ## Word App - v1
 ---
 
+For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.
 
-For the creative writer, songwriter, rapper, or poet struggling with a word, or writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.
 
-
-[Live Demo]()
+[Live Demo](https://intense-mountain-91161.herokuapp.com/)
 
 
 ![WordApp Demo](https://github.com/giwajossy/wordapp/blob/master/demo.gif)
@@ -31,9 +30,7 @@ For the creative writer, songwriter, rapper, or poet struggling with a word, or 
 **The result when you search for words that ryhme with "happy"**
 ![Word related to ready when you are](https://res.cloudinary.com/dd3hmuucq/image/upload/v1629925326/WordApp%20Resources/wordApp_result_for_happy_hdpe1a.jpg)
 
-
 ---
-
 
 ## To run the app manually
 *note*: `run all commands in the applications root directory`
@@ -57,7 +54,6 @@ npm install
 - QUERY_PREFFIX=https://api.datamuse.com/words?
 - QUERY_SUFFIX=&md=d,p,r&ipa=1
 ```
-
 
 **Start the application**
 
@@ -103,4 +99,3 @@ I utilized this principle since it abstains from investing energy on features th
 
 **To do**
 - Polish User Interface and Experience
-
