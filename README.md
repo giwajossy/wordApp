@@ -1,6 +1,6 @@
 ## Word App 
-
 - version 1.0
+---
 
 
 WordApp helps you out of your writer's block. It does so much thinking for you by suggesting *related words*, *rhymes*, *synonyms*, and *antonyms* as quickly as possible.
@@ -28,11 +28,7 @@ If you are a creative writer, poet, song writer, rapper, musician, or poet who o
 
 ---
 **Homepage**
-![WordApp Homepage](https://res.cloudinary.com/dd3hmuucq/image/upload/v1629919269/WordApp%20Resources/_Word_App_Demo_rik4gz.gif)
-
-
-**The result when you search for words related to "ready when you are"**
-![Word related to ready when you are](https://res.cloudinary.com/dd3hmuucq/image/upload/v1629925326/WordApp%20Resources/wordApp_related_words_for_happy_f8sx42.jpg)
+![WordApp Homepage](https://res.cloudinary.com/dd3hmuucq/image/upload/v1629919255/WordApp%20Resources/__wordApp_eb2r2k.jpg)
 
 
 **The result when you search for words that ryhme with "happy"**
@@ -102,6 +98,11 @@ I utilized this principle since it abstains from investing energy on features th
 ```
 
 ---
+
+**The result when you search for words related to "ready when you are"**
+![Word related to ready when you are](https://res.cloudinary.com/dd3hmuucq/image/upload/v1629925326/WordApp%20Resources/wordApp_related_words_for_happy_f8sx42.jpg)
+
+--- 
 
 **To do**
 - Polish User Interface and Experience
