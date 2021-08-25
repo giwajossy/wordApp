@@ -63,7 +63,7 @@ body {
 
   @media (max-width: 400px) {
     #result  {
-      min-width: 45%;
+      width: 45%;
     }
   }
 
@@ -157,6 +157,10 @@ input:focus {
 
   #guidePC {
     display: none;
+  }
+
+  #result {
+    width: 45%;
   }
 
 }
