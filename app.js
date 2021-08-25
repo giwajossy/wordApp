@@ -128,4 +128,4 @@ app.get("/track", (req, res) => {
     })
 })
 
-app.listen(port, ()=> console.log(`Server spinning on port ${port}`))
+app.listen(process.env.PORT || port, ()=> console.log(`Server spinning on port ${port}`))
