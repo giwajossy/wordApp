@@ -1,11 +1,8 @@
-## Word App 
-- version 1.0
+## Word App - v1
 ---
 
 
-WordApp helps you out of your writer's block. It does so much thinking for you by suggesting *related words*, *rhymes*, *synonyms*, and *antonyms* as quickly as possible.
-
-If you are a creative writer, poet, song writer, rapper, musician, or poet who often struggles with words, WordApp will save you a ton of stress.
+For the creative writer, songwriter, rapper, or poet struggling with a word, or writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.
 
 
 [Live Demo]()
@@ -107,7 +104,3 @@ I utilized this principle since it abstains from investing energy on features th
 **To do**
 - Polish User Interface and Experience
 
-
----
-**Author:** 
-- Giwa Jossy
