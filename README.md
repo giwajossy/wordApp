@@ -35,7 +35,7 @@ The *Rhymes* constraint, for instance, requires that the results are pronounced 
 ---
 
 ## To run the app manually
-*note*: `run all commands in the applications root directory`
+*note*: `run all commands in the application's root directory`
 
 **Install all dependencies**
 
