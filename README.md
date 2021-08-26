@@ -1,7 +1,9 @@
 ## Word App - v1
 ---
 
-For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.
+For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms as accurately as possible.
+
+The *Rhymes* constraint, for instance, requires that the results are pronounced similarly to the user's entry. If the string of characters doesn't have a known pronunciation, the system will make its best guess using a text-to-phonemes algorithm.
 
 
 [Live Demo](https://intense-mountain-91161.herokuapp.com/)
