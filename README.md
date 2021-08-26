@@ -6,7 +6,7 @@ For creative writers, songwriters, rappers, and poets struggling with writer's b
 The *Rhymes* constraint, for instance, requires that the results are pronounced similarly to the user's entry. If the string of characters doesn't have a known pronunciation, the system will make its best guess using a text-to-phonemes algorithm.
 
 
-[Live Demo](https://intense-mountain-91161.herokuapp.com/)
+[Live Demo](https://use-word-app.herokuapp.com/)
 
 
 ![WordApp Demo](https://github.com/giwajossy/wordapp/blob/master/demo.gif)
