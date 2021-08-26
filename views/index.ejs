@@ -44,10 +44,12 @@
 
                     <%if (index <= 60) {%>
                         
-                        <button class="btn btn-outline-secondary button" id="result" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-html="true"
-                         title="<%=data.defs %>">
+                        <button class="btn btn-outline-secondary button" id="result" data-bs-toggle="popover" data-bs-placement="top"  data-bs-trigger="focus" data-bs-html="true"
+                        data-bs-content="<%=data.defs %>" tabindex="0">
                         <%= data.word %>
                         </button>
+
+                        
 
                     <%}%>
                 <% }) %>
