@@ -1,7 +1,7 @@
 {
   "name": "word",
   "version": "1.0.0",
-  "description": "",
+  "description": "For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms as accurately as possible.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,8 +15,6 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.13.5",
-    "nodemon": "^2.0.12",
-    "popper.js": "^1.16.1",
-    "tooltip.js": "^1.3.3"
+    "nodemon": "^2.0.12"
   }
 }
