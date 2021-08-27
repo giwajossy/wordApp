@@ -1,5 +1,6 @@
 ## Word App - v1
 ---
+**Author:** Giwa Jossy
 
 For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms as accurately as possible.
 
