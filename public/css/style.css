@@ -152,7 +152,7 @@ input:focus {
     border: 1px solid rgba(0, 0, 0, .005);
     box-shadow: 1px 1px 7px rgba(0, 0, 0, .09);
     padding: 5%;
-    margin-top: 35% !important;
+    margin-top: 30% !important;
     transition: all .5s ease-in-out;
   }
 
