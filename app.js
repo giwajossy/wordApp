@@ -47,87 +47,89 @@ var word = "";
 var filter = "";
 var queryResult;
 
-
-app.route("/")
-    .get((req, res)=> {
-
-    
-        res.render("index", {
-            title: "Word App",
-            item: wordOutput,
-            enteredWord: word,
-            query: filter
-        })
+app.get("/", (req, res) => {
+    res.render("index", {
+        title: "Word App"
     })
-    .post((req, res) => {
-    
-        word = req.body.word
-        filter = req.body.filter
-        var query = ""    
-        
-        checkBulkQuery = (entry)=> {
-            let getAllWords = entry.split(" ")
-            let getLastWord = getAllWords[getAllWords.length - 1]
-            return getLastWord
-        }
-    
-        switch (filter) {
-            case "synonyms":
-                query = `rel_syn=${checkBulkQuery(word)}`
-                break;
-            case "antonyms":
-                query = `rel_ant=${checkBulkQuery(word)}`
-                break;
-            case "rhymes":
-                query = `rel_rhy=${checkBulkQuery(word)}`
-                // query = `sp=${checkBulkQuery(word)}`
-                break;
-            case "related-words":
-                query = `ml=${word}`
-                break;    
-            default:
-                break; 
-        }
-        
-        
-        const url = `${process.env.QUERY_PREFFIX}${query}${process.env.QUERY_SUFFIX}`
-        // console.log(url)
-        
-        axios.get(url)
-        .then(function (response) {
-            const wordData = response.data
-            wordOutput = wordData
-    
-            if (wordOutput.length > 1) {
-                queryResult = true
-            } else {
-                queryResult = false
-            }    
-    
-            const saveQuery = Query({
-                query: word,
-                filter: filter,
-                queryOutput: queryResult,
-                updated: Date.now()
-            })
-    
-            saveQuery.save((err) => {
-                if (err) console.log(err)
-                res.redirect("/")
-            })    
-            
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-        .then(function () {
-            // always executed
-        });
-    
+})
+
+app.get("/result", (req, res)=> {
+
+    res.render("result", {
+        title: `'${word}' - '${filter}' - WordApp`,
+        item: wordOutput,
+        enteredWord: word,
+        query: filter
     })
+})    
     
 
+app.post("/result", (req, res) => {
+
+    word = req.body.word
+    filter = req.body.filter
+    var query = ""    
+    
+    checkBulkQuery = (entry)=> {
+        let getAllWords = entry.split(" ")
+        let getLastWord = getAllWords[getAllWords.length - 1]
+        return getLastWord
+    }
+
+    switch (filter) {
+        case "synonyms":
+            query = `rel_syn=${checkBulkQuery(word)}`
+            break;
+        case "antonyms":
+            query = `rel_ant=${checkBulkQuery(word)}`
+            break;
+        case "rhymes":
+            query = `rel_rhy=${checkBulkQuery(word)}`
+            // query = `sp=${checkBulkQuery(word)}`
+            break;
+        case "related-words":
+            query = `ml=${word}`
+            break;    
+        default:
+            break; 
+    }
+    
+    
+    const url = `${process.env.QUERY_PREFFIX}${query}${process.env.QUERY_SUFFIX}`
+    // console.log(url)
+    
+    axios.get(url)
+    .then(function (response) {
+        const wordData = response.data
+        wordOutput = wordData
+
+        if (wordOutput.length > 1) {
+            queryResult = true
+        } else {
+            queryResult = false
+        }    
+
+        const saveQuery = Query({
+            query: word,
+            filter: filter,
+            queryOutput: queryResult,
+            updated: Date.now()
+        })
+
+        saveQuery.save((err) => {
+            if (err) console.log(err)
+            res.redirect("/result")
+        })    
+        
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .then(function () {
+        // always executed
+    });
+})
 
 app.get("/track", (req, res) => {
 
