@@ -23,7 +23,7 @@ The *Rhymes* constraint, for instance, requires that the results are pronounced 
 - NodeJS
 - ExpressJS
 - GSAP
-- Datamuse API
+- [Datamuse API](https://www.datamuse.com/api/)
 
 ---
 **Homepage**
