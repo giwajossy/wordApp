@@ -26,6 +26,11 @@ const querySchema = mongoose.Schema({
         required: [true, "Filter is required"]
     },
 
+    queryOutput: {
+        type: Boolean,
+        required: [true, "Query result is required"]
+    },
+
     updated: {
         type: Date,
         default: Date.now
@@ -39,7 +44,8 @@ const Query = mongoose.model("Query", querySchema)
 
 var wordOutput = [];
 var word = "";
-var filter = ""
+var filter = "";
+var queryResult;
 
 app.get("/", (req, res)=> {
 
@@ -92,12 +98,20 @@ app.post("/", (req, res) => {
         // handle success
         // console.log(response)
         const wordData = response.data
-        // console.log(wordData)
+        // console.log(wordData.length)
         wordOutput = wordData
+
+        if (wordOutput.length > 1) {
+            queryResult = true
+        } else {
+            queryResult = false
+        }
+
 
         const saveQuery = Query({
             query: word,
             filter: filter,
+            queryOutput: queryResult,
             updated: Date.now()
         })
 
