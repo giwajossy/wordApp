@@ -101,8 +101,12 @@ app.post("/", (req, res) => {
             updated: Date.now()
         })
 
-        saveQuery.save()
-        res.redirect("/")
+        saveQuery.save((err) => {
+            if (err) console.log(err)
+            res.redirect("/")
+        })
+
+        
     })
     .catch(function (error) {
         // handle error
