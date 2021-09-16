@@ -195,3 +195,7 @@ input:focus {
     display: none;
   }
 }
+
+#lead {
+  color: rgba(0, 0, 0, .6);
+}
