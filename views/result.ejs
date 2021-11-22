@@ -40,8 +40,8 @@
             <%# Display query result so long query is valid and understood by the API  %>
             <%if (item.length > 0) {%>
                 <h2 id="queryPlacard">Top <code><%= query %></code> found for <code>"<%=  enteredWord %>"</code></h2>
-                <h6 id="guidePC"> 👇🏼 Click on a word to see the definition 👇🏼 </h6>
-                <h6 id="guideMobile"> 👇🏼 Tap word to see definition 👇🏼 </h6>
+                <!-- <h6 id="guidePC"> 👇🏼 Click on a word to see the definition 👇🏼 </h6> -->
+                <!-- <h6 id="guideMobile"> 👇🏼 Tap word to see definition 👇🏼 </h6> -->
                 <% item.map((data, index) => { %>
 
                     <%if (index <= 60) {%>
