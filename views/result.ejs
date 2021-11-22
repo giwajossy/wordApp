@@ -6,7 +6,8 @@
                 
                 <div class="desc">
                     <a href="/"><span class="fa fa-chevron-circle-left" style="position:absolute; left: 10%; font-size: 2em; text-decoration: none; color: black;"></span></a>
-                    <h1 class="display-6 fw-normal">Word App</h1>
+                    
+                    <h1><span class="iconify" data-icon="ri:file-word-2-fill"></span>Word App</h1><br>
                     <p class="lead fw-normal" id="lead">Struggling with a word?<br> Find related words, rhymes, synonyms, and antonyms</p>
                 </div>
 
@@ -14,7 +15,7 @@
                     <input type="text" name="word" class="form-control" id="word" autofocus autocomplete="off" placeholder="Describe it, we'll take it from there." required>
                     
                     <select name="filter" class="form-control" required>
-                        <option selected disabled>Filter your search</option>
+                        <option selected disabled>Click here to filter your search</option>
                         <option value="related-words">Related words</option>
                         <option value="rhymes">Rhymes</option>
                         <option value="synonyms">Synonyms</option>
@@ -39,7 +40,7 @@
             <%# Display query result so long query is valid and understood by the API  %>
             <%if (item.length > 0) {%>
                 <h2 id="queryPlacard">Top <code><%= query %></code> found for <code>"<%=  enteredWord %>"</code></h2>
-                <h6 id="guidePC"> 👇🏼 Hover over a word to see the definition 👇🏼 </h6>
+                <h6 id="guidePC"> 👇🏼 Click on a word to see the definition 👇🏼 </h6>
                 <h6 id="guideMobile"> 👇🏼 Tap word to see definition 👇🏼 </h6>
                 <% item.map((data, index) => { %>
 
