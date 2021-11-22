@@ -101,7 +101,6 @@ I utilized this principle since it abstains from investing energy on features th
 
 **To do**
 - Refactor project in Typescript.
-- Keep polishing the user experience
 
 
 ---
