@@ -48,7 +48,6 @@ body {
     margin: 5px;
     min-width: 15%;
     border: none;
-    border-radius: 3em .5em;
     outline: none;
   }
 
@@ -69,11 +68,8 @@ body {
   outline: none !important;
   box-shadow: none !important;
   width: 100%;
-  padding: 4%;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  padding: 3.5%;
+  border-radius: 50px;
   background: rgba(0, 0, 0, .75);
   color: #fff;
   font-size: 1.2em;
@@ -93,6 +89,7 @@ body {
   border: 1px solid black;
   border-radius: 0;
   border-bottom: 0;
+  border-radius: 50px;
   transition: all .5s ease-in;
 }
 
@@ -104,6 +101,7 @@ body {
 input[type="text"] {
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
+  border-radius: 50px;
   transition: all .5s ease-in;
 }
 
@@ -115,9 +113,11 @@ input:focus {
 
 
 #spaceHome {
-  border: 2px solid rgba(0, 0, 0, .005);
+  /* border: 2px solid rgba(0, 0, 0, .005); */
+  border: 1px solid #bbb ;
   box-shadow: 1px 3px 30px rgba(0, 0, 0, .2);
   margin-top: 4% !important;
+  border-radius: 20px ;
   transition: all .5s ease-in-out;
 }
 
@@ -184,7 +184,7 @@ input:focus {
 
   #result {
     width: 45%;
-    border-radius: 3em .5em;
+    /* border-radius: 3em .5em; */
   }
 
 }

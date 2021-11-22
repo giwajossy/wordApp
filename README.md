@@ -1,6 +1,5 @@
 ## Word App - v1
 ---
-**Author:** Giwa Jossy
 
 For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms as accurately as possible.
 
@@ -101,4 +100,14 @@ I utilized this principle since it abstains from investing energy on features th
 --- 
 
 **To do**
-- Polish User Interface and Experience
+- Refactor project in Typescript.
+- Keep polishing the user experience
+
+
+---
+**Authors:** 
+
+- [Giwa Jossy](https://github.com/giwajossy): <*Backend*> - Built the backend logic.
+
+- [Raluchukwu Ugochukwu](https://github.com/ralu-ugo): <*Frontend*> - Re-designed and improved the user interface.
+

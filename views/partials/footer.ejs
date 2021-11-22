@@ -21,7 +21,7 @@
     gsap.from("#word", { duration: 1, y: 50 })
     gsap.from("#fetchButton", { duration: 1, y: -50 })
     gsap.to("#result", {
-        duration: .2, border: "1px solid black", scale: 1, stagger: 0.09, rotationX: 360, onComplete: function () {
+        duration: .2, border: "1.5px dotted black", scale: 1, stagger: 0.09, rotationX: 360, onComplete: function () {
             gsap.to("#result", { duration: 1, scale: 1.09 })
         }
     })
