@@ -1,95 +1,29 @@
-body {
-  background: #ffffff;
-}
-
-
-
-
 .container {
-    max-width: 960px;
-  }
-  
-  /*
-   * Custom translucent site header
-   */
-  
-  .site-headerf {
-    background-color: rgba(0, 0, 0, .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-  .site-header a {
-    color: #8e8e8e;
-    transition: color .15s ease-in-out;
-  }
-  .site-header a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-
-
-  /*
-   * Extra utilities
-  */
-  
-  .flex-equal > * {
-    flex: 1;
-  }
-  @media (min-width: 768px) {
-    .flex-md-equal > * {
-      flex: 1;
-    }
-  }
-
-
-  #result {
-    padding: .4%;
-    margin: 5px;
-    min-width: 15%;
-    border: none;
-    outline: none;
-  }
-
-  #result button {
-    text-align: left;
-    outline: none;
-  }
-
-
-  @media (max-width: 400px) {
-    #result  {
-      width: 45%;
-    }
-  }
-
-
-#fetchButton {
-  outline: none !important;
-  box-shadow: none !important;
-  width: 100%;
-  padding: 3.5%;
-  border-radius: 50px;
-  background: rgba(0, 0, 0, .75);
-  color: #fff;
-  font-size: 1.2em;
-  transition: all .5 ease-in
+  max-width: 960px;
 }
 
-#fetchButton:hover {
-  background: rgba(0, 0, 0, .8);
-  transition: all .5 ease-in
+
+#spaceHome {
+  box-shadow: 1px 3px 30px rgba(0, 0, 0, .2);
+  margin-top: 4% !important;
+  border-radius: 20px;
+  transition: all .5s ease-in-out;
 }
 
+#spaceHome:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  transition: all .5s ease-in-out;
+}
+
+#lead {
+  color: rgba(0, 0, 0, .6);
+}
 
 .form-control {
-  outline: none !important;
+  outline: none;
   box-shadow: none !important;
   padding: 3%;
   border: 1px solid black;
-  border-radius: 0;
-  border-bottom: 0;
-  border-radius: 50px;
   transition: all .5s ease-in;
 }
 
@@ -101,40 +35,42 @@ body {
 input[type="text"] {
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
-  border-radius: 50px;
-  transition: all .5s ease-in;
-}
-
-input:focus {
-  border: 1px solid black;
-  box-shadow: none !important;
   transition: all .5s ease-in;
 }
 
 
-#spaceHome {
-  /* border: 2px solid rgba(0, 0, 0, .005); */
-  border: 1px solid #bbb ;
-  box-shadow: 1px 3px 30px rgba(0, 0, 0, .2);
-  margin-top: 4% !important;
-  border-radius: 20px ;
-  transition: all .5s ease-in-out;
+#fetchButton {
+  width: 100%;
+  padding: 3.5%;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-size: 1.2em;
+  transition: all .5 ease-in
 }
 
-#spaceHome:hover {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
-  transition: all .5s ease-in-out;
+#fetchButton:hover {
+  background: rgba(0, 0, 0, .9);
+  transition: all .5 ease-in
+}
+
+#result {
+  padding: .4%;
+  margin: 5px;
+  min-width: 15%;
 }
 
 
 #spaceResult {
   border: 2px solid rgba(0, 0, 0, .005);
   box-shadow: 1px 3px 30px rgba(0, 0, 0, .2);
+  outline: none;
   transition: all .5s ease-in-out;
 }
 
 #spaceResult:hover {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, .1); */
   transition: all .5s ease-in-out;
 }
 
@@ -142,8 +78,10 @@ input:focus {
   margin-top: 1.5% !important;
 }
 
-#guidePC, #guideMobile {
-  color: rgba(0, 0, 0, .6);
+@media (max-width: 400px) {
+  #result {
+    width: 45%;
+  }
 }
 
 
@@ -166,11 +104,12 @@ input:focus {
     box-shadow: 1px 1px 7px rgba(0, 0, 0, .09);
     padding: 5%;
     margin-top: 10% !important;
+    outline: none;
     transition: all .5s ease-in-out;
   }
 
   #spaceResult:hover {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+    /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .1); */
     transition: all .5s ease-in-out;
   }
 
@@ -178,24 +117,30 @@ input:focus {
     margin-top: 10% !important;
   }
 
-  #guidePC {
-    display: none;
-  }
-
   #result {
     width: 45%;
-    /* border-radius: 3em .5em; */
   }
 
-}
-
-
-@media screen and (min-width: 450px) {
-  #guideMobile {
-    display: none;
+  #lead {
+    font-size: 1.1em;
   }
+
+  input[type="text"] {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    transition: all .5s ease-in;
+  }
+
+  #fetchButton {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  select {
+    border-radius: 0;
+  }
+  
+
 }
 
-#lead {
-  color: rgba(0, 0, 0, .6);
-}
+
