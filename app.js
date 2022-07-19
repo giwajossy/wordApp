@@ -4,15 +4,22 @@ const axios = require('axios')
 const mongoose = require('mongoose');
 require('dotenv').config()
 
+const TimeAgo = require('javascript-time-ago')
+const en = require('javascript-time-ago/locale/en')
+TimeAgo.addDefaultLocale(en)
+
+// Create formatter (English).
+const timeAgo = new TimeAgo('en-US')
+
 
 const app = express()
 const port = 3000
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.static(`${__dirname}/public`))
 app.set("view engine", "ejs")
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Query Schema
 const querySchema = mongoose.Schema({
@@ -53,7 +60,7 @@ app.get("/", (req, res) => {
     })
 })
 
-app.get("/result", (req, res)=> {
+app.get("/result", (req, res) => {
 
     res.render("result", {
         title: `'${word}' - '${filter}' - WordApp`,
@@ -61,16 +68,16 @@ app.get("/result", (req, res)=> {
         enteredWord: word,
         query: filter
     })
-})    
-    
+})
+
 
 app.post("/result", (req, res) => {
 
     word = req.body.word
     filter = req.body.filter
-    var query = ""    
-    
-    checkBulkQuery = (entry)=> {
+    var query = ""
+
+    checkBulkQuery = (entry) => {
         let getAllWords = entry.split(" ")
         let getLastWord = getAllWords[getAllWords.length - 1]
         return getLastWord
@@ -89,51 +96,45 @@ app.post("/result", (req, res) => {
             break;
         case "related-words":
             query = `ml=${word}`
-            break;    
+            break;
         default:
-            break; 
+            break;
     }
-    
-    
+
+
     const url = `${process.env.QUERY_PREFFIX}${query}${process.env.QUERY_SUFFIX}`
-    // console.log(url)
-    
+
     axios.get(url)
-    .then(function (response) {
-        const wordData = response.data
-        wordOutput = wordData
+        .then(function (response) {
+            const wordData = response.data
+            wordOutput = wordData
 
-        if (wordOutput.length > 1) {
-            queryResult = true
-        } else {
-            queryResult = false
-        }    
+            wordOutput.length > 1
+                ? queryResult = true
+                : queryResult = false
 
-        const saveQuery = Query({
-            query: word,
-            filter: filter,
-            queryOutput: queryResult,
-            updated: Date.now()
+            const saveQuery = Query({
+                query: word,
+                filter: filter,
+                queryOutput: queryResult,
+                updated: Date.now()
+            })
+
+            saveQuery.save((err) => {
+                if (err) console.log(err)
+                res.redirect("/result")
+            })
+
         })
-
-        saveQuery.save((err) => {
-            if (err) console.log(err)
-            res.redirect("/result")
-        })    
-        
-    })
-    .catch(function (error) {
-        // handle error
-        console.log(error);
-    })
-    .then(function () {
-        // always executed
-    });
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
 })
 
 app.get("/track", (req, res) => {
 
-    Query.find({__v: 0}, (err, documents) => {
+    Query.find({}, (err, documents) => {
         if (err) console.log(err)
         res.render("track", {
             title: "Track Queries",
@@ -142,4 +143,4 @@ app.get("/track", (req, res) => {
     })
 })
 
-app.listen(process.env.PORT || port, ()=> console.log(`Server spinning on port ${port}`))
+app.listen(process.env.PORT || port, () => console.log(`Server spinning on port ${port}`))

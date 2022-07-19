@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.">
+    <meta name="description"
+        content="For creative writers, songwriters, rappers, and poets struggling with writer's block, WordApp saves you a ton of stress by suggesting related words, rhymes, synonyms, or antonyms, as quickly as possible.">
     <meta name="author" content="Giwa Jossy">
     <meta name="theme-color" content="#000000">
     <title>
@@ -14,8 +15,10 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         .bd-placeholder-img {
@@ -31,11 +34,6 @@
                 font-size: 3.5rem;
             }
         }
-
-
-       
-
-
     </style>
 
 
@@ -45,19 +43,21 @@
 
 <body>
 
-    <div class="container" style="position: relative;">        
+    <div class="container" style="position: relative;">
 
         <div class="row justify-content-center" style="margin-top: 5%;">
 
             <div class="col-md-12">
                 <div class="card o-hidden borderr-1 shadow-lg my-2" id="one" style="padding: 2%;">
                     <div class="card-body p-0">
-                        
+
                         <table class="table table-bordered table-hover table-striped">
-            
+
                             <thead>
                                 <tr>
-                                    <th colspan="3"> <%= docs.length %> Querie(s) </th>
+                                    <th colspan="3">
+                                        <%= docs.length %> Querie(s)
+                                    </th>
                                 </tr>
                                 <tr>
                                     <th>S/N</th>
@@ -67,35 +67,44 @@
                                     <th>Timestamp ⌚</th>
                                 </tr>
                             </thead>
-                
+
                             <tbody>
-                
-                                <%docs.map((items, index) => {%>
-                                    
+
+                                <%docs.map((items, index)=> {%>
+
                                     <tr>
-                                        <td><%= index+1 %></td>
-                                        <td><%= items.query %></td>
-                                        <td><%= items.filter %></td>
-                                        <td><%= items.queryOutput %></td>
-                                        <td><%= items.updated %></td>
+                                        <td>
+                                            <%= index+1 %>
+                                        </td>
+                                        <td>
+                                            <%= items.query %>
+                                        </td>
+                                        <td>
+                                            <%= items.filter %>
+                                        </td>
+                                        <td>
+                                            <%= items.queryOutput %>
+                                        </td>
+                                        <td>
+                                            <%= items.updated %>
+                                        </td>
                                     </tr>
-                                    
-                                <%})%>
-                
+
+                                    <%})%>
+
                             </tbody>
-                
+
                         </table>
 
                     </div>
                 </div>
             </div>
 
-            
+
 
         </div>
 
-        
+
     </div>
 
-<%- include("partials/footer.ejs") %>
-    
+    <%- include("partials/footer.ejs") %>
