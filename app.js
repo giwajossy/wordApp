@@ -4,14 +4,6 @@ const axios = require('axios')
 const mongoose = require('mongoose');
 require('dotenv').config()
 
-const TimeAgo = require('javascript-time-ago')
-const en = require('javascript-time-ago/locale/en')
-TimeAgo.addDefaultLocale(en)
-
-// Create formatter (English).
-const timeAgo = new TimeAgo('en-US')
-
-
 const app = express()
 const port = 3000
 
